@@ -1,10 +1,10 @@
 ---
-myvalue: 4
-mylist:
+myvalueyml: 4
+mylistyml:
   - 5
   - 10
   - 15
   - "This is anisble class"
-myDict:
+myDictyml:
   name: Muthu
   class: devops
