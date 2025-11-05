@@ -1,19 +1,19 @@
 ---
-  - name: This playbook defines how will you use vars_file to print variables
-    hosts: local
-    gather_facts: false
-    vars_file:
-      - variable.json
-      - variable1.yml
-    tasks:
-      - name: priting value from json file
-        ansible.builtin.debug:
-          msg:
-            - "Below values are priting from json file"
-            - "{{ myvalue }} {{ mylist }} {{ myDict }}"
-      
-      - name: priting value from yml file
-        ansible.builtin.debug:
-          msg:
-            - "Below values are priting from yml file"
-            - "{{ myvalueyml }} {{ mylistyml }} {{ myDictyml }}"
+- name: This playbook defines how will you use vars_file to print variables
+  hosts: local
+  gather_facts: false
+  vars_files:
+    - variable.json
+    - variable1.yml
+  tasks:
+    - name: priting value from json file
+      ansible.builtin.debug:
+        msg:
+          - "Below values are priting from json file"
+          - "{{ myvalue }} {{ mylist }} {{ myDict }}"
+
+    - name: priting value from yml file
+      ansible.builtin.debug:
+        msg:
+          - "Below values are priting from yml file"
+          - "{{ myvalueyml }} {{ mylistyml }} {{ myDictyml }}"
