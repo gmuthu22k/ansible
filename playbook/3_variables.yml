@@ -1,0 +1,26 @@
+---
+  - name: Variables understanding
+    hosts: all
+    gather_facts: false
+    vars:
+      x: 5
+      y: 5.5
+      z: "This is variable"
+    tasks:
+      - name: Printing the variables value of X"
+        ansible.builtin.debug:
+          msg:
+            - "The value of x is {{ x }}"
+            - "The data type of x is {{ x | ansible.builtin.type_debug }}"
+
+      - name: Printing the variables value of Y"
+        ansible.builtin.debug:
+          msg:
+            - "The value of y is {{ y }}"
+            - "The data type of y is {{ y | ansible.builtin.type_debug }}"
+
+      - name: Printing the variables value of Z"
+        ansible.builtin.debug:
+          msg:
+            - "The value of z is {{ z }}"
+            - "The data type of z is {{ z | ansible.builtin.type_debug }}"

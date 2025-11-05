@@ -1,0 +1,308 @@
+2025-11-04 14:09:46,321 p=11199 u=ansadmin n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/ansadmin/playbook/1_example.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: Diplay a message
+      ^ here
+
+2025-11-04 14:11:19,463 p=11257 u=ansadmin n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/ansadmin/playbook/1_example.yml': line 6, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    tasks:
+      - name: Diplay a message
+        ^ here
+
+2025-11-04 14:14:20,907 p=11309 u=ansadmin n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/ansadmin/playbook/1_example.yml': line 6, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    tasks:
+      - name: Diplay a message
+        ^ here
+
+2025-11-04 14:15:51,877 p=11367 u=ansadmin n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/ansadmin/playbook/1_example.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - name: Diplay a message
+      ^ here
+
+2025-11-04 14:16:31,640 p=11421 u=ansadmin n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/ansadmin/playbook/1_example.yml': line 6, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+      - name: Diplay a message
+        ^ here
+
+2025-11-04 14:17:49,569 p=11425 u=ansadmin n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/ansadmin/playbook/1_example.yml': line 6, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+      - name: Diplay a message
+        ^ here
+
+2025-11-04 14:18:17,288 p=11430 u=ansadmin n=ansible | PLAY [Example Playbook] *************************************************************************************************************************************************************************************
+2025-11-04 14:18:17,297 p=11430 u=ansadmin n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************
+2025-11-04 14:18:18,430 p=11430 u=ansadmin n=ansible | ok: [localhost]
+2025-11-04 14:18:18,959 p=11430 u=ansadmin n=ansible | [WARNING]: Platform linux on host 98.94.65.204 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation of another Python interpreter could change the meaning of that
+path. See https://docs.ansible.com/ansible-core/2.15/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-04 14:18:18,959 p=11430 u=ansadmin n=ansible | ok: [98.94.65.204]
+2025-11-04 14:18:19,226 p=11430 u=ansadmin n=ansible | ok: [54.167.101.94]
+2025-11-04 14:18:19,266 p=11430 u=ansadmin n=ansible | TASK [Diplay a message] *************************************************************************************************************************************************************************************
+2025-11-04 14:18:19,287 p=11430 u=ansadmin n=ansible | ok: [98.94.65.204] => {
+    "msg": "This is sample playbook"
+}
+2025-11-04 14:18:19,304 p=11430 u=ansadmin n=ansible | ok: [54.167.101.94] => {
+    "msg": "This is sample playbook"
+}
+2025-11-04 14:18:19,314 p=11430 u=ansadmin n=ansible | ok: [localhost] => {
+    "msg": "This is sample playbook"
+}
+2025-11-04 14:18:19,379 p=11430 u=ansadmin n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************
+2025-11-04 14:18:19,379 p=11430 u=ansadmin n=ansible | 54.167.101.94              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-04 14:18:19,379 p=11430 u=ansadmin n=ansible | 98.94.65.204               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-04 14:18:19,380 p=11430 u=ansadmin n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:27:12,956 p=13344 u=ansadmin n=ansible | PLAY [Install nginx software] *******************************************************************************************************************************************************************************
+2025-11-04 15:27:12,978 p=13344 u=ansadmin n=ansible | TASK [Install nginx] ****************************************************************************************************************************************************************************************
+2025-11-04 15:27:14,883 p=13344 u=ansadmin n=ansible | ok: [localhost]
+2025-11-04 15:27:15,196 p=13344 u=ansadmin n=ansible | [WARNING]: Platform linux on host 98.94.65.204 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation of another Python interpreter could change the meaning of that
+path. See https://docs.ansible.com/ansible-core/2.15/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-04 15:27:15,196 p=13344 u=ansadmin n=ansible | ok: [98.94.65.204]
+2025-11-04 15:27:15,946 p=13344 u=ansadmin n=ansible | ok: [54.167.101.94]
+2025-11-04 15:27:15,950 p=13344 u=ansadmin n=ansible | TASK [Start nginx] ******************************************************************************************************************************************************************************************
+2025-11-04 15:27:16,731 p=13344 u=ansadmin n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.builtin.systemd) module: enable. Supported parameters include: daemon_reexec, daemon_reload, enabled, force, masked, name, no_block, scope, state (daemon-reexec, daemon-reload, service, unit)."}
+2025-11-04 15:27:16,839 p=13344 u=ansadmin n=ansible | fatal: [54.167.101.94]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.builtin.systemd) module: enable. Supported parameters include: daemon_reexec, daemon_reload, enabled, force, masked, name, no_block, scope, state (daemon-reexec, daemon-reload, service, unit)."}
+2025-11-04 15:27:16,857 p=13344 u=ansadmin n=ansible | fatal: [98.94.65.204]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.builtin.systemd) module: enable. Supported parameters include: daemon_reexec, daemon_reload, enabled, force, masked, name, no_block, scope, state (daemon-reexec, daemon-reload, service, unit)."}
+2025-11-04 15:27:16,858 p=13344 u=ansadmin n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************
+2025-11-04 15:27:16,859 p=13344 u=ansadmin n=ansible | 54.167.101.94              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:27:16,859 p=13344 u=ansadmin n=ansible | 98.94.65.204               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:27:16,859 p=13344 u=ansadmin n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:28:16,616 p=13461 u=ansadmin n=ansible | PLAY [Install nginx software] *******************************************************************************************************************************************************************************
+2025-11-04 15:28:16,637 p=13461 u=ansadmin n=ansible | TASK [Install nginx] ****************************************************************************************************************************************************************************************
+2025-11-04 15:28:18,559 p=13461 u=ansadmin n=ansible | ok: [localhost]
+2025-11-04 15:28:18,581 p=13461 u=ansadmin n=ansible | [WARNING]: Platform linux on host 98.94.65.204 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation of another Python interpreter could change the meaning of that
+path. See https://docs.ansible.com/ansible-core/2.15/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-04 15:28:18,581 p=13461 u=ansadmin n=ansible | ok: [98.94.65.204]
+2025-11-04 15:28:19,567 p=13461 u=ansadmin n=ansible | ok: [54.167.101.94]
+2025-11-04 15:28:19,570 p=13461 u=ansadmin n=ansible | TASK [Start nginx] ******************************************************************************************************************************************************************************************
+2025-11-04 15:28:20,499 p=13461 u=ansadmin n=ansible | ok: [98.94.65.204]
+2025-11-04 15:28:20,509 p=13461 u=ansadmin n=ansible | ok: [54.167.101.94]
+2025-11-04 15:28:20,803 p=13461 u=ansadmin n=ansible | changed: [localhost]
+2025-11-04 15:28:20,829 p=13461 u=ansadmin n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************
+2025-11-04 15:28:20,830 p=13461 u=ansadmin n=ansible | 54.167.101.94              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:28:20,830 p=13461 u=ansadmin n=ansible | 98.94.65.204               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:28:20,830 p=13461 u=ansadmin n=ansible | localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:29:41,233 p=13702 u=ansadmin n=ansible | PLAY [Install nginx software] *******************************************************************************************************************************************************************************
+2025-11-04 15:29:41,254 p=13702 u=ansadmin n=ansible | TASK [Install nginx] ****************************************************************************************************************************************************************************************
+2025-11-04 15:29:43,131 p=13702 u=ansadmin n=ansible | ok: [localhost]
+2025-11-04 15:29:43,404 p=13702 u=ansadmin n=ansible | [WARNING]: Platform linux on host 98.94.65.204 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation of another Python interpreter could change the meaning of that
+path. See https://docs.ansible.com/ansible-core/2.15/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-04 15:29:43,404 p=13702 u=ansadmin n=ansible | ok: [98.94.65.204]
+2025-11-04 15:29:44,135 p=13702 u=ansadmin n=ansible | ok: [54.167.101.94]
+2025-11-04 15:29:44,138 p=13702 u=ansadmin n=ansible | TASK [Start nginx] ******************************************************************************************************************************************************************************************
+2025-11-04 15:29:44,926 p=13702 u=ansadmin n=ansible | ok: [localhost]
+2025-11-04 15:29:45,093 p=13702 u=ansadmin n=ansible | ok: [54.167.101.94]
+2025-11-04 15:29:45,109 p=13702 u=ansadmin n=ansible | ok: [98.94.65.204]
+2025-11-04 15:29:45,135 p=13702 u=ansadmin n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************
+2025-11-04 15:29:45,136 p=13702 u=ansadmin n=ansible | 54.167.101.94              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:29:45,136 p=13702 u=ansadmin n=ansible | 98.94.65.204               : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-04 15:29:45,136 p=13702 u=ansadmin n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-05 08:17:01,636 p=40319 u=ansadmin n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/home/ansadmin/playbook/3_variables.yml': line 1, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Variables understanding
+    ^ here
+
+2025-11-05 08:17:37,987 p=40325 u=ansadmin n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/home/ansadmin/playbook/3_variables.yml': line 1, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Variables understanding
+    ^ here
+
+2025-11-05 08:26:34,571 p=40586 u=ansadmin n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/home/ansadmin/playbook/3_variables.yml': line 9, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    tasks:
+      - name: Printing the variables value of X"
+        ^ here
+
+2025-11-05 08:26:51,379 p=40591 u=ansadmin n=ansible | ERROR! no module/action detected in task.
+
+The error appears to be in '/home/ansadmin/playbook/3_variables.yml': line 9, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    tasks:
+      - name: Printing the variables value of X"
+        ^ here
+
+2025-11-05 08:28:12,261 p=40597 u=ansadmin n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/home/ansadmin/playbook/3_variables.yml': line 1, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Variables understanding
+    ^ here
+
+2025-11-05 08:28:28,081 p=40650 u=ansadmin n=ansible | ERROR! conflicting action statements: ansible.builtin.debug, msg
+
+The error appears to be in '/home/ansadmin/playbook/3_variables.yml': line 9, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    tasks:
+      - name: Printing the variables value of X"
+        ^ here
+
+2025-11-05 08:29:21,349 p=40655 u=ansadmin n=ansible | PLAY [Variables understanding] ******************************************************************************************************************************************************************************
+2025-11-05 08:29:21,371 p=40655 u=ansadmin n=ansible | TASK [Printing the variables value of X"] *******************************************************************************************************************************************************************
+2025-11-05 08:29:21,418 p=40655 u=ansadmin n=ansible | ok: [localhost] => {
+    "msg": [
+        "The value of x is 5",
+        "The data type of x is int"
+    ]
+}
+2025-11-05 08:29:21,420 p=40655 u=ansadmin n=ansible | ok: [98.94.65.204] => {
+    "msg": [
+        "The value of x is 5",
+        "The data type of x is int"
+    ]
+}
+2025-11-05 08:29:21,430 p=40655 u=ansadmin n=ansible | ok: [54.167.101.94] => {
+    "msg": [
+        "The value of x is 5",
+        "The data type of x is int"
+    ]
+}
+2025-11-05 08:29:21,433 p=40655 u=ansadmin n=ansible | TASK [Printing the variables value of Y"] *******************************************************************************************************************************************************************
+2025-11-05 08:29:21,485 p=40655 u=ansadmin n=ansible | ok: [98.94.65.204] => {
+    "msg": [
+        "The value of y is 5.5",
+        "The data type of y is float"
+    ]
+}
+2025-11-05 08:29:21,498 p=40655 u=ansadmin n=ansible | ok: [54.167.101.94] => {
+    "msg": [
+        "The value of y is 5.5",
+        "The data type of y is float"
+    ]
+}
+2025-11-05 08:29:21,508 p=40655 u=ansadmin n=ansible | ok: [localhost] => {
+    "msg": [
+        "The value of y is 5.5",
+        "The data type of y is float"
+    ]
+}
+2025-11-05 08:29:21,512 p=40655 u=ansadmin n=ansible | TASK [Printing the variables value of Z"] *******************************************************************************************************************************************************************
+2025-11-05 08:29:21,565 p=40655 u=ansadmin n=ansible | ok: [98.94.65.204] => {
+    "msg": [
+        "The value of z is This is variable",
+        "The data type of z is AnsibleUnicode"
+    ]
+}
+2025-11-05 08:29:21,577 p=40655 u=ansadmin n=ansible | ok: [54.167.101.94] => {
+    "msg": [
+        "The value of z is This is variable",
+        "The data type of z is AnsibleUnicode"
+    ]
+}
+2025-11-05 08:29:21,586 p=40655 u=ansadmin n=ansible | ok: [localhost] => {
+    "msg": [
+        "The value of z is This is variable",
+        "The data type of z is AnsibleUnicode"
+    ]
+}
+2025-11-05 08:29:21,612 p=40655 u=ansadmin n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************
+2025-11-05 08:29:21,612 p=40655 u=ansadmin n=ansible | 54.167.101.94              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-05 08:29:21,612 p=40655 u=ansadmin n=ansible | 98.94.65.204               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-05 08:29:21,612 p=40655 u=ansadmin n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-05 11:57:22,730 p=46015 u=ansadmin n=ansible | PLAY [Variable with list & Dict] **********************************************************************************************************************************************************************************
+2025-11-05 11:57:22,752 p=46015 u=ansadmin n=ansible | TASK [Priting the values] *****************************************************************************************************************************************************************************************
+2025-11-05 11:57:22,781 p=46015 u=ansadmin n=ansible | ok: [98.94.65.204] => {
+    "msg": "5 [10, 20, 'ansible'] {'myfirst': 5, 'mysecond': 'This is devops class'}"
+}
+2025-11-05 11:57:22,783 p=46015 u=ansadmin n=ansible | ok: [54.167.101.94] => {
+    "msg": "5 [10, 20, 'ansible'] {'myfirst': 5, 'mysecond': 'This is devops class'}"
+}
+2025-11-05 11:57:22,785 p=46015 u=ansadmin n=ansible | ok: [localhost] => {
+    "msg": "5 [10, 20, 'ansible'] {'myfirst': 5, 'mysecond': 'This is devops class'}"
+}
+2025-11-05 11:57:22,788 p=46015 u=ansadmin n=ansible | TASK [Printng the index value from list] **************************************************************************************************************************************************************************
+2025-11-05 11:57:22,814 p=46015 u=ansadmin n=ansible | ok: [98.94.65.204] => {
+    "msg": [
+        "20",
+        "ansible"
+    ]
+}
+2025-11-05 11:57:22,822 p=46015 u=ansadmin n=ansible | ok: [54.167.101.94] => {
+    "msg": [
+        "20",
+        "ansible"
+    ]
+}
+2025-11-05 11:57:22,825 p=46015 u=ansadmin n=ansible | ok: [localhost] => {
+    "msg": [
+        "20",
+        "ansible"
+    ]
+}
+2025-11-05 11:57:22,829 p=46015 u=ansadmin n=ansible | TASK [Printing a specific Dicitionary value] **********************************************************************************************************************************************************************
+2025-11-05 11:57:22,865 p=46015 u=ansadmin n=ansible | ok: [98.94.65.204] => {
+    "msg": "This is devops class"
+}
+2025-11-05 11:57:22,873 p=46015 u=ansadmin n=ansible | ok: [54.167.101.94] => {
+    "msg": "This is devops class"
+}
+2025-11-05 11:57:22,877 p=46015 u=ansadmin n=ansible | ok: [localhost] => {
+    "msg": "This is devops class"
+}
+2025-11-05 11:57:22,903 p=46015 u=ansadmin n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************
+2025-11-05 11:57:22,903 p=46015 u=ansadmin n=ansible | 54.167.101.94              : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-05 11:57:22,903 p=46015 u=ansadmin n=ansible | 98.94.65.204               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-05 11:57:22,903 p=46015 u=ansadmin n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -1,0 +1,17 @@
+---
+  - name: Install nginx software
+    hosts: all
+    gather_facts: false
+    become: yes
+    tasks:
+      - name: Install nginx
+        ansible.builtin.package:
+          name: nginx
+          state: present
+
+      - name: Start nginx
+        ansible.builtin.systemd:
+          name: nginx
+          state: started
+          enabled: yes
+

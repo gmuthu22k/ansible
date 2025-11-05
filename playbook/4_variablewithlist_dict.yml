@@ -1,0 +1,30 @@
+---
+  - name: Variable with list & Dict
+    hosts: all
+    gather_facts: false
+    vars:
+      myvalue: 5
+      mylist:
+        - 10
+        - 20
+        - "ansible"
+      myDict:
+        myfirst: 5
+        mysecond: "This is devops class"
+    
+    tasks:
+      - name: Priting the values
+        ansible.builtin.debug:
+          msg: "{{ myvalue }} {{ mylist }} {{ myDict }}"
+      
+      - name: Printng the index value from list
+        ansible.builtin.debug:
+          msg: 
+            - "{{ mylist[1] }}"
+            - "{{ mylist[-1] }}"
+      
+      - name: Printing a specific Dicitionary value
+        ansible.builtin.debug:
+          msg: "{{ myDict.mysecond }}"
+
+
