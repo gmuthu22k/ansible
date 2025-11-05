@@ -1,0 +1,8 @@
+---
+- name: Passing values from command line
+  hosts: local
+  gather_facts: true
+  tasks:
+    - name: Getting the value of x from running Playbook
+      ansible.builtin.debug:
+        msg: "The value of x is {{ x }}"
