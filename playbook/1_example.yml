@@ -1,8 +1,8 @@
 --- # Document seperator
 
-  - name: Example Playbook # not mandtory but good practice to have a name
-    hosts: all
-    tasks:
-      - name: Diplay a message
-        ansible.builtin.debug:
-          msg: "This is sample playbook"
+- name: Example Playbook # not mandtory but good practice to have a name
+  hosts: all
+  tasks:
+    - name: Diplay a message
+      ansible.builtin.debug:
+        msg: "This is sample playbook"

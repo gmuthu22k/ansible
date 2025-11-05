@@ -1,0 +1,10 @@
+---
+myvalue: 4
+mylist:
+  - 5
+  - 10
+  - 15
+  - "This is anisble class"
+myDict:
+  name: Muthu
+  class: devops

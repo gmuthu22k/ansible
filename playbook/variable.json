@@ -1,0 +1,12 @@
+{
+    "myvalue": 10,
+    "mylist": [
+        10,
+        20,
+        "ansible"
+    ],
+    "myDict": {
+        "name": "muthu",
+        "age": 34
+    }
+}
