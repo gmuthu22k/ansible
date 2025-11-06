@@ -1,0 +1,8 @@
+---
+  - name: Register the output
+    hosts: local
+    gather_facts: false
+    tasks:
+      - name: Getting the uname value
+        ansible.builtin.command: "uname"
+        
