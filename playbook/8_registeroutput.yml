@@ -12,7 +12,7 @@
         msg: "{{ unameout.stdout }}"
 
     - name: print the version name
-      ansible.builtin.command: "ngnix -v"
+      ansible.builtin.command: "nginx -v"
       register: version
 
     - name: print the nginx version
