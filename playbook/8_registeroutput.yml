@@ -15,5 +15,6 @@
       ansible.builtin.command: "ngnix -v"
       register: version
 
+    - name: print the nginx version
       ansible.builtin.debug:
         msg: "{{ version }}"
