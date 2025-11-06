@@ -9,4 +9,4 @@
 
     - name: Printing the uname value
       ansible.builtin.debug:
-        msg: "{{ unameout }}"
+        msg: "{{ unameout.stdout }}"
