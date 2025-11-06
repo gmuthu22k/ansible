@@ -17,4 +17,4 @@
 
     - name: print the nginx version
       ansible.builtin.debug:
-        msg: "{{ version }}"
+        msg: "{{ version.stderr }}"
