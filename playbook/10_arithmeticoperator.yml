@@ -1,6 +1,6 @@
 ---
 - name: This playbook help us to learn the Arithmetic Operators
-  hosts: local
+  hosts: DEV
   gather_facts: false
   vars:
     x: 15
