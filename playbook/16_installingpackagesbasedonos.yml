@@ -4,9 +4,6 @@
   gather_facts: true
   become: true
   tasks:
-    - name: Printing the fats
-      ansible.builtin.debug:
-        msg: { { ansible_facts } }
     - name: Install the package using yum
       ansible.builtin.yum:
         name: nginx
