@@ -1,0 +1,14 @@
+---
+  - name: Check if a user is in a list
+    hosts: local
+    gather_facts: false
+    vars:
+      users:
+        - alice
+        - bob
+        - charlie
+    tasks:
+      - name: Check if user is in the list
+        ansible.builtin.debug:
+          msg: "Mentioned user is in the list of users {{ users }}"
+        when: "'bob' in users"
