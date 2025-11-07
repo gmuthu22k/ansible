@@ -1,0 +1,23 @@
+---
+  - name: Check if the value not in the list
+    hosts: local
+    gather_facts: false
+    vars:
+      courses:
+        - Devops
+        - AWS
+        - Python
+        - Linux
+    vars_prompt:
+      - name: course_name
+        prompt: "Enter the your course name: "
+        private: no
+    tasks:
+      - name: Check if the user course in the list or not
+        ansible.builtin.debug:
+          msg: "The user course {{ course_name }} is not in the list of courses {{ courses }}"
+        when: "'{{ course_name }} not in courses"
+      - name: Check if the user course in the list
+        ansible.builtin.debug:
+          msg: "Checking in the debug state {{ {{course_name}} in courses }}"
+
