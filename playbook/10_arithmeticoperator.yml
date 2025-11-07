@@ -9,8 +9,13 @@
     - name: We will doing maths calculations
       ansible.builtin.debug:
         msg:
-          - "The addition of x and y is: {{ x + y}}"
-          - "The substraction of x and y is: {{ x - y}}"
-          - "The multiplication of x and y is: {{ x * y}}"
-          - "The division of x and y is: {{ x / y}}"
-          - "The modulus of x and y is: {{ x % y}}"
+          - "The addition of x and y is: {{ x + y }}"
+          - "The substraction of x and y is: {{ x - y }}"
+          - "The multiplication of x and y is: {{ x * y }}"
+          - "The division of x and y is: {{ x / y }}"
+          - "The modulus of x and y is: {{ x % y }}"
+          - "The addition of a and b is: {{ a + b }}"
+          - "The substraction of a and b is: {{ a - b }}"
+          - "The multiplication of a and b is: {{ a * b }}"
+          - "The division of a and b is: {{ a / b }}"
+          - "The modulus of a and b is: {{ a % b }}"
