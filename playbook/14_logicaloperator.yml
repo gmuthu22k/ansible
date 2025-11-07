@@ -1,0 +1,39 @@
+---
+- name: Using logical operators inside jinja2 templates
+  hosts: localhost
+  gather_facts: false
+  vars:
+    server_status: "healthy"
+    cpu_usage: 75
+    disk_space: 40
+    service_status: "running"
+    user_role: "admin"
+    user_permissions: ["read", "write", "execute"]
+    maintenance_mode: true
+    critical_users: ["alice", "bob", "charlie"]
+  tasks:
+    # Task 1: Server Health check and CPU Optimization
+    - name: Server Health Check and CPU Optimization
+      ansible.builtin.debug:
+        msg: "{{ 'Server is healthy and CPY usage is below 80.' if server_status == 'healthy' and cpu_usage < 80 else 'Condition not met.' }}"
+    # Task 2: Service and Maintenance status Evaluation
+    - name: Service and Maintenance status Evaluation
+      debug:
+        msg: "{{ 'Service is running or in maintenance mode.' if service_status == 'running' or maintenance_mode else 'Neither Service is running nor in Maintrnance mode' }}"
+    # Task 3: Maintenance Mode Check
+    - name: Maintenance Mode Check
+      debug:
+        msg: "{{ 'The server is not in Maintenance Mode' if not maintenance_mode else 'The Server in Maintenance mode' }}"
+    # Task 4: User Role Validation
+    - name: User Role Validation
+      debug:
+        msg: "{{ 'The user is admin' if user_role == 'admin' else 'The user is not admin' }}"
+    # Task 5: Disk Space Validation
+    - name: Disk Space Validation
+      debug:
+        msg: "{{ 'Disk space is not 30%' if disk_space != 30 else 'Disk space is 30%.' }}"
+    # Task 6: Disk Space Validation using when
+    - name: Disk Space Validation
+      debug:
+        msg: "Disk space is not 30%"
+      when: disk_space != 30
