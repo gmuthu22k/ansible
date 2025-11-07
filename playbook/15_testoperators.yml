@@ -4,7 +4,7 @@
   gather_facts: false
   vars:
     my_var: "Hello"
-    fruits: ['apple', 'banana', 'orange']
+    fruits: ["apple", "banana", "orange"]
     server_status: "Healthy"
     cpu_usage: 75
     user_role: "admin"
