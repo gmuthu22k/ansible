@@ -8,11 +8,9 @@
       ansible.builtin.yum:
         name: nginx
         state: present
-        update_cache: true
       when: ansible_facs.os_family == 'RedHat'
     - name: Install the package using apt
       ansible.builtin.apt:
         name: nginx
         state: present
-        update_cache: true
       when: ansible_facs.os_family == 'Debian'
