@@ -1,0 +1,8 @@
+---
+- name: Run task using include
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Install software from the ymml file
+      include_tasks: "{{ ansible_facts.os_release | lower }}.yml"
+  
