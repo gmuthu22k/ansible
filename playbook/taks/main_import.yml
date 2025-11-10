@@ -1,0 +1,9 @@
+---
+- name: Install using import_tasks
+  hosts: all
+  gather_facts: true
+  tasks:
+    - import_tasks: ./redhat.yml
+      when: ansible_facts.os_family == "RedHat"
+    - import_tasks: ./debian.yml
+      when: ansible_facts.os_family == "Debian"
