@@ -1,0 +1,27 @@
+---
+- name: Playbook for error Handling
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Check nginx version
+      ansible.builtin.command:
+        cmd: nginx -v
+      register: nginx_result
+      ignore_errors: true
+    - name: Printing version
+      ansible.builtin.debug:
+        msg: "{{ nginx_result }}"
+    - name: Conditionally fail if nginx command succeeds
+      ansible.builtin.debug:
+        msg: "Nginx command succeeded unexpectedly"
+      when: nginx_result.rc == 0
+      failed_when: nginx_result.rc == 0
+    - name: Run a safe command only if nginx failed
+      ansible.builtin.command:
+        cmd: uname
+      when: nginx_result.rc != 0
+      register: uname_result
+    - name: Show uname output
+      ansible.builtin.debug:
+        msg: "Uname output: {{ uname_result.stdout }}"
+      when: uname_result is defined
