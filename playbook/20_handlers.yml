@@ -1,0 +1,15 @@
+---
+- name: Playboook to install nginx and then to restart it
+  hosts: local
+  gather_facts: false
+  tasks:
+    - name: To install nginx
+      anisble.builtin.package:
+        name: nginx
+        state: present
+      notify: Start nginx
+  handlers:
+    - name: Start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
