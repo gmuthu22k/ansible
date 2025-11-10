@@ -4,5 +4,4 @@
   gather_facts: true
   tasks:
     - name: Install software from the ymml file
-      include_tasks: "{{ ansible_facts.os_release | lower }}.yml"
-  
+      include_tasks: "{{ ansible_facts.os_family | lower }}.yml"
