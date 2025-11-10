@@ -1,0 +1,34 @@
+---
+- name: Playbook to understand error handling
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Try to find the nginx version
+      block:
+        - name: Finding nginx version
+          ansible.builtin.command:
+            cmd: nginx -v
+          register: nginx_result
+          failed_when: nginx_result.rc != 0
+      rescue:
+        - name: Handling nginx not installed
+          ansible.builtin.debug:
+            msg: "Nginx is not installed in this machine"
+      always:
+        - name: Always run this to show the block is complete
+          ansible.builtin.debug:
+            msg: "Completed nginx version check block"
+
+    - name: Finding uname info
+      ansible.builtin.command:
+        cmd: uname
+      register: uname_output
+
+    - name: Displaying uname details
+      ansible.builtin.debug:
+        msg: "uname: {{ uname_output.stdout }}"
+
+    - name: Displaying nginx version if available
+      when: nginx_result is defined and nginx_result.rc == 0
+      ansible.builtin.debug:
+        msg: "nginx version: {{ nginx_result.stderr }}"
