@@ -16,6 +16,6 @@
         - "{{ reqloc }}"
         - "{{ url }}"
         - "{{ targzFileName }}"
-        - "{{ reqJavaver }}"
+        - "{{ reqJavaVer }}"
         - "{{ javaHomePath }}"
         - "{{ targzFileNamePath }}"
