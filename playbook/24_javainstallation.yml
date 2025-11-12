@@ -20,7 +20,7 @@
           - "{{ javaHomePath }}"
           - "{{ targzFileNamePath }}"
     - name: Downloading required tar.gz file
-      ansible.builtin.get_ulr:
+      ansible.builtin.get_url:
         url: "{{ url }}"
         dest: "{{ reqloc }}"
     - name: Extracting tar.gz file
