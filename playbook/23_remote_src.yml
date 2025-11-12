@@ -16,5 +16,5 @@
     - name: Setting Java_home ENV variable
       ansible.builtin.lineinfile:
         path: /etc/environment
-        line: "export JAVA_HOME=/opt/jdk-25.0.1"
+        line: "JAVA_HOME=/opt/jdk-25.0.1"
         state: present
