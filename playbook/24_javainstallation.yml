@@ -31,7 +31,7 @@
     - name: Setting Java_home ENV variable
       ansible.builtin.lineinfile:
         path: "/etc/environment"
-        regex: "export JAVA_HOME={{ javaHomePath }}"
+        line: "export JAVA_HOME={{ javaHomePath }}"
         state: present
     - name: Remove tar.gz file
       ansible.builtin.file:
