@@ -13,9 +13,10 @@
   tasks:
     - name: Printing the values
       ansible.builtin.debug:
-        - "{{ reqloc }}"
-        - "{{ url }}"
-        - "{{ targzFileName }}"
-        - "{{ reqJavaVer }}"
-        - "{{ javaHomePath }}"
-        - "{{ targzFileNamePath }}"
+        msg:
+          - "{{ reqloc }}"
+          - "{{ url }}"
+          - "{{ targzFileName }}"
+          - "{{ reqJavaVer }}"
+          - "{{ javaHomePath }}"
+          - "{{ targzFileNamePath }}"
