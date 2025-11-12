@@ -6,9 +6,18 @@
     - name: Print devops
       ansible.builtin.debug:
         msg: "This is Devops class"
+      tags:
+        - First
+        - Never
     - name: Print Ansible
       ansible.builtin.debug:
         msg: "This is Ansible class"
+      tags:
+        - Second
+        - Never
     - name: Print Full
       ansible.builtin.debug:
         msg: "This is Full class"
+      tags:
+        - Third
+        - Always
