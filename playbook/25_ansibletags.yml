@@ -1,0 +1,14 @@
+---
+- name: Playbook about tag
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Print devops
+      ansible.builtin.debug:
+        msg: "This is Devops class"
+    - name: Print Ansible
+      ansible.builtin.debug:
+        msg: "This is Ansible class"
+    - name: Print Full
+      ansible.builtin.debug:
+        msg: "This is Full class"
