@@ -28,7 +28,7 @@
         src: "{{ targzFileNamePath }}"
         dest: "{{ reqloc }}"
     - name: Setting Java_home ENV variable
-      ansible.builtin.lineinefile:
+      ansible.builtin.lineinfile:
         path: "/etc/environment"
         regex: "export JAVA_HOME={{ javaHomePath }}"
         state: present
