@@ -13,7 +13,7 @@
         src: /opt/openjdk-25.0.1_linux-x64_bin.tar.gz
         dest: /opt
         remote_src: true
-    - namme: Setting Java_home ENV variable
+    - name: Setting Java_home ENV variable
       ansible.builtin.lineinfile:
         path: /etc/environment
         line: "export JAVA_HOME=/opt/jdk-25.0.1"
