@@ -27,6 +27,7 @@
       ansible.builtin.unarchive:
         src: "{{ targzFileNamePath }}"
         dest: "{{ reqloc }}"
+        remote_src: true
     - name: Setting Java_home ENV variable
       ansible.builtin.lineinfile:
         path: "/etc/environment"
