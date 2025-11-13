@@ -19,7 +19,6 @@
       ansible.builtin.template:
         src: index.j2
         dest: /var/www/html/index.html
-      notify: Restart httpd
   handlers:
     - name: Restart httpd
       ansible.builtin.service:
