@@ -1,0 +1,27 @@
+---
+- name: Playbook for template demo
+  hosts: localhost
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Install httpd Package
+      ansible.builtin.package:
+        name: httpd
+        state: present
+        update_cache: yes
+      ignore_errors: true
+    - name: Start httpd service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
+    - name: Copy index.html
+      ansible.builtin.copy:
+        src: index.html
+        dest: /var/www/html/inex.html
+      notify: Restart httpd
+  handlers:
+    - name: Restart httpd
+      ansible.builtin.service:
+        name: httpd
+        state: started
