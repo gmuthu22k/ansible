@@ -15,9 +15,9 @@
         name: httpd
         state: started
         enabled: true
-    - name: Copy index.html
-      ansible.builtin.copy:
-        src: index.html
+    - name: Copy file using jinja2 template
+      ansible.builtin.template:
+        src: index.j2
         dest: /var/www/html/index.html
       notify: Restart httpd
   handlers:
