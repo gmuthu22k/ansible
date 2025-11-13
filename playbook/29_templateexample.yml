@@ -18,7 +18,7 @@
     - name: Copy index.html
       ansible.builtin.copy:
         src: index.html
-        dest: /var/www/html/inex.html
+        dest: /var/www/html/index.html
       notify: Restart httpd
   handlers:
     - name: Restart httpd
