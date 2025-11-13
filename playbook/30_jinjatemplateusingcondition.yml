@@ -1,0 +1,21 @@
+---
+- name: Playbook demo for jinja template condition
+  hosts: localhost
+  gather_facts: false
+  become: true
+  vars:
+    a: 80
+    b: 120
+    mystring: "Hello"
+    mylist:
+      - vim
+      - tail
+      - git
+      - tcp
+      - httpd
+  tasks:
+    - name: Copy the condition page jinja template
+      ansible.builtin.template:
+        src: text.j2
+        dist: /home/ansadmin/note.txt
+  
