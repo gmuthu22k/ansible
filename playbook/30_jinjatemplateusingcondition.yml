@@ -17,5 +17,4 @@
     - name: Copy the condition page jinja template
       ansible.builtin.template:
         src: text.j2
-        dist: /home/ansadmin/note.txt
-  
+        dest: /home/ansadmin/note.txt
